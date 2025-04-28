@@ -7,11 +7,11 @@ Original file is located at
     https://colab.research.google.com/drive/1gysRKcGB0ab2PoeOoL3KQEMTmFMl-eFn
 """
 
-def DiviRecu(Dividendo, Divisor):                           #(4, 2)
-    if Dividendo < Divisor:
+def DiviRecu(Dividendo, Divisor):                           #(8, 4)
+    if Dividendo < Divisor:                                  # 8 > 4  #8-4,4 
         return 0
-    return 1 + DiviRecu(Dividendo - Divisor, Divisor)       #DyD
-
+    return 1 + DiviRecu(Dividendo - Divisor, Divisor)       #DyD    (4,4)           #4 - 4) (o,4)
+                                                                    # 0 < 4  RETORNA 0
 
 Dividendo = int(input("Ingresa el Dividendo: "))
 divisor = int(input("Ingresa el Divisor: "))
@@ -20,4 +20,4 @@ if divisor == 0:
     print("ERROR!!!!! INGRESA NUMEROS POSITIVOS")
 else:
     resultado = DiviRecu(Dividendo, divisor)
-    print(f"El resultado de la división es: {resultado}")
+    print(f"El resultado de la división es: {resultado}")     #8,4) = 2  ocho dividido en 4 es igual a 2
